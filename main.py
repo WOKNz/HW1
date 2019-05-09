@@ -1,4 +1,4 @@
-import Point2D as Pnt
+import Geometry as Pnt
 
 
 if __name__ == '__main__':
