@@ -57,7 +57,26 @@ class LineSegment:
         self.id = id_initial
         self.pnt1 = pnt1_initial
         self.pnt2 = pnt2_initial
+        if self.pnt1.y-self.pnt2.y == 0:
+            self.a = 0
+            self.b = -1/self.pnt1.y
+            self.c = -1
+        elif self.pnt1.x-self.pnt2.x == 0:
+            self.a = 1
+            self.b = 0
+            self.c = -self.pnt1.x
+        else:
+            if self.pnt2.x>self.pnt1.x:
+                self.a = (self.pnt2.y-self.pnt1.y) / (self.pnt2.x-self.pnt1.x)
+                self.b = self.pnt1.y-self.a*self.pnt1.x
+                self.c = -1
+            else:
+                self.a = (self.pnt1.y - self.pnt2.y) / (self.pnt1.x - self.pnt2.x)
+                self.b = self.pnt1.y-self.a*self.pnt1.x
+                self.c = -1
 
+    def f(self, x_input):
+        return -(self.a * x_input) / self.b - self.c
     
     @property
     def id(self):
