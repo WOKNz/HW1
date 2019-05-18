@@ -76,7 +76,7 @@ import random
 #     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
 
 
-# Testing regular heapsort
+# # Testing regular heapsort
 # mylist = [24, 6, 73, 8, 42, 82, 76, 23, 8, 65, 98, 96, 88, 98, 95, 76, 66, 86, 21, 87]
 # mylist = []
 # for i in range(0, 20):
@@ -90,3 +90,20 @@ import random
 #     k.append(a.pull())
 #
 # print(str(k[0:len(k)]))
+
+# # Testing object's atribute heapsort
+# mylist = []
+# for i in range(0, 10):
+#     x = random.randint(1, 10)
+#     y = random.randint(1, 10)
+#     mylist.append(Geometry.Point2D(i, x, y))
+#
+# for point in mylist:
+#     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+# print("---")
+#
+# a = Heap.Heap(mylist, "min", key=lambda point: point.x)
+# sorted_a = a.sort(key=lambda point: point.x)
+# for point in sorted_a:
+#     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+# print("---")
