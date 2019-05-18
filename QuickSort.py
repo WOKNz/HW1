@@ -37,3 +37,27 @@ def get_pivot(a, low, high, key=default_key):  # selecting best pivot
         pivot = low
     return pivot
 
+
+def qs(listofobj, field: int, order: int):
+    if field == 0 and order == 0:
+        quick_sort(listofobj, key=lambda point: point.x)
+        return listofobj.copy()
+    elif field == 0 and order == 1:
+        quick_sort(listofobj, key=lambda point: point.y)
+        return listofobj.copy()
+    elif field == 1 and order == 0:
+        quick_sort(listofobj, key=lambda point: point.x)
+        tmp = []
+        tmp = listofobj.copy()
+        tmp.reverse()
+        return tmp
+    elif field == 1 and order == 1:
+        quick_sort(listofobj, key=lambda point: point.y)
+        tmp = []
+        tmp = listofobj.copy()
+        tmp.reverse()
+        return tmp
+    else:
+        print("One of the input parameters is illegal")
+        return
+

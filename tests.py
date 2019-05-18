@@ -124,3 +124,20 @@ import random
 # for point in mylist_sorted:
 #     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
 # print("---")
+
+# # Testing final revision of QuickSort call function
+# mylist = []
+# for i in range(0, 10):
+#     x = random.randint(1, 10)
+#     y = random.randint(1, 10)
+#     mylist.append(Geometry.Point2D(i, x, y))
+#
+# for point in mylist:
+#     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+# print("---")
+#
+# mylist_sorted = QuickSort.qs(mylist, 0, 0)
+#
+# for point in mylist_sorted:
+#     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+# print("---")

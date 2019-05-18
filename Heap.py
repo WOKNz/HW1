@@ -86,11 +86,11 @@ def hs(listofobj, field: int, order: int):
         a = Heap(listofobj, "min", key=lambda point: point.x)
         return a.sort(key=lambda point: point.x)
     elif field == 0 and order == 1:
-        a = Heap(listofobj, "min", key=lambda point: point.x)
-        return a.sort(key=lambda point: point.x)
-    elif field == 1 and order == 0:
-        a = Heap(listofobj, "max", key=lambda point: point.y)
+        a = Heap(listofobj, "min", key=lambda point: point.y)
         return a.sort(key=lambda point: point.y)
+    elif field == 1 and order == 0:
+        a = Heap(listofobj, "max", key=lambda point: point.x)
+        return a.sort(key=lambda point: point.x)
     elif field == 1 and order == 1:
         a = Heap(listofobj, "max", key=lambda point: point.y)
         return a.sort(key=lambda point: point.y)
