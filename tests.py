@@ -1,6 +1,7 @@
 import Geometry
 import QuickSort
-
+import Heap
+import random
 
 # # Testing vertical line
 # p1 = Geometry.Point2D(0, 1, 4)
@@ -73,3 +74,19 @@ import QuickSort
 # QuickSort.quick_sort(mylist, key=lambda point: point.y)
 # for point in mylist:
 #     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+
+
+# Testing regular heapsort
+# mylist = [24, 6, 73, 8, 42, 82, 76, 23, 8, 65, 98, 96, 88, 98, 95, 76, 66, 86, 21, 87]
+# mylist = []
+# for i in range(0, 20):
+#     mylist.append(random.randint(1, 100))
+# a = Heap.Heap(mylist, "max")
+#
+# print(str(a.heap[0:len(a.heap)]))
+#
+# k = []
+# while len(a.heap) > 0:
+#     k.append(a.pull())
+#
+# print(str(k[0:len(k)]))
