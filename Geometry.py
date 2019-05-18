@@ -1,6 +1,6 @@
 class Point2D:
     def __init__(self, id_initial: int, x_initial: float, y_initial: float):
-        """
+        """  # Testing comment system
         Class of Point object
 
         :param id_initial: ID of the point
@@ -40,7 +40,7 @@ class Point2D:
 
 
 class LineSegment:
-    def __init__(self, id_initial: int, pnt1_initial: Point2D, pnt2_initial: Point2D):
+    def __init__(self, id_initial: int, pnt1_initial: Point2D, pnt2_initial: Point2D):  # Builder
         """
         LineSegment class that represent line segment constructed from
         two point
@@ -52,28 +52,27 @@ class LineSegment:
         :param pnt2_initial: Second point that construct the segment
         :type pnt2_initial: Point2D
         """
+        # Equation of Line
         self.id = id_initial
         self.pnt1 = pnt1_initial
         self.pnt2 = pnt2_initial
-        if self.pnt1.y - self.pnt2.y == 0:
-            self.a = 0
-            self.b = -1 / self.pnt1.y
-            self.c = 1
-        elif self.pnt1.x - self.pnt2.x == 0:
-            self.a = 1
-            self.b = 0
-            self.c = -self.pnt1.x
-        else:
-            if self.pnt2.x > self.pnt1.x:
-                self.a = (self.pnt2.y - self.pnt1.y) / (self.pnt2.x - self.pnt1.x)
-                self.b = self.pnt1.y - self.a * self.pnt1.x
-                self.c = -1
-            else:
-                self.a = (self.pnt1.y - self.pnt2.y) / (self.pnt1.x - self.pnt2.x)
-                self.b = self.pnt1.y - self.a * self.pnt1.x
-                self.c = -1
 
-    def f(self, x_input):
+        # Cases
+        if self.pnt1.y == self.pnt2.y:  # Horizontal line
+            self.a = 0
+            self.b = -1
+            self.c = self.pnt1.y
+        else:
+            if self.pnt1.x == self.pnt2.x:  # Vertical line
+                self.a = -1
+                self.b = 0
+                self.c = self.pnt1.x
+            else:
+                self.a = self.pnt1.y - self.pnt2.y
+                self.b = self.pnt1.x - self.pnt2.x
+                self.c = self.pnt1.x * self.pnt2.y - self.pnt2.x * self.pnt1.y
+
+    def f(self, x_input):  # Function of x
         return (-(self.a * x_input) / self.b) - self.c
 
     @property
