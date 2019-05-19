@@ -146,3 +146,8 @@ import random
 # for point in mylist_sorted:
 #     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
 # print("---")
+
+# # Code for plotting list of Point2D
+# for point in pnts:
+#     #     print("P", point.id + 1, "(", point.x, ",", point.y, ") ")
+#     # print("---")

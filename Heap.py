@@ -55,7 +55,7 @@ class Heap:
         left = (i+1)*2 - 1
         right = (i+1)*2
         compared = i
-        if self.type == "min":  # case for min heap
+        if self.type == "min":  # case for min heap (default case)
             if len(self.heap) > left and key(self.heap[compared]) > key(self.heap[left]):
                 compared = left
             if len(self.heap) > right and key(self.heap[compared]) > key(self.heap[right]):
