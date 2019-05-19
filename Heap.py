@@ -25,7 +25,7 @@ class Heap:
             return False
 
     def pull(self, key=default_key):  # Pulling the root
-        if len(self.heap) > 1:  # Healty tree
+        if len(self.heap) > 1:  # Healthy tree
             self.__swap(0, len(self.heap)-1)
             root = self.heap.pop()
             self.__down(0, key=key)  # Fixing heap after pull
